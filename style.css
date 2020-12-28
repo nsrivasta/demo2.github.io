@@ -1,0 +1,74 @@
+
+body{
+	margin:0px;
+	padding:0px;
+    box-sizing:border-box;
+	
+}
+
+
+
+ .carousel-caption h5,p{
+	
+	
+	align-items:center;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+	border-radius:30%; 
+	border:3px solid white;
+   align-items:center;
+   background-color:#0C98E2;
+   
+    
+}
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
+	 background-color:#29B966;
+	 
+	 transition:0.4s all ease-in-out;
+	 	 
+}
+
+
+.carousel-indicators li {
+  
+	border-radius:50%;
+	position: relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 333330px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.5);
+	
+    
+    
+}
+
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+	
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.3);
+}
+
+

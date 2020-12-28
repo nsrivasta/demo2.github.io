@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <title>Hello, world!</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@200;300&display=swap');
+	*{
+		margin:0;
+		padding:0;
+		font-family: 'Open Sans', sans-serif;
+		/*font-family: 'Oswald', sans-serif;*/
+		
+	}
+	html {
+  scroll-behavior: smooth;
+}
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+   .carousel-indicators li { 
+	border-radius:50%;
+	position: relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.5);
+	
+	
+    
+    
+}
+ .carousel-indicators{
+	 z-index:1;
+ }
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    /*background: transparent;*/
+    color: inherit;
+    border: 1px solid green;
+    padding: 0!important;
+    font: inherit;
+	width:30px;
+	height:30px;
+	background: rgba(0,0,0,0.5);
+	z-index:1;
+	
+}
+.owl-carousel button.owl-dot{
+	width:30px;
+	
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+	border-radius:30%; 
+	border:3px solid white;
+   align-items:center;
+   background-color:#0C98E2;
+   display:center;
+   z-index:99;
+   
+    
+}
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
+	 background-color:#29B966;
+	 
+	 transition:0.4s all ease-in-out;
+	 	 
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+   /* min-width: 10rem!important;*/
+	width:11rem;
+    padding: .5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+.navbar li{
+	margin-right:30px;
+}
+.card{
+	box-shadow: 0 8px 6px -6px black;
+	 transition: transform .2s;
+}
+.card:hover{
+	transform:rotate(2deg);
+	transition:all 0.2s;
+	transform: scaleY(1.1);
+	
+}
+.btn{
+	align-items:center;
+}
+.form-group{
+	
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
+  box-shadow: 0 8px 6px -6px black;
+}
+.text{
+	 box-shadow: 0 8px 6px -6px black;
+}
+.back{
+	background-image:url('kl.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
+}
+
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   z-index:1;
+   box-shadow: 0 8px 6px -6px gray;
+ 
+}
+.link a{
+	text-decoration:none;
+	
+}
+.link li{
+	list-style-type:none;
+}
+.services{
+	scroll-behavior: smooth;
+}
+
+
+
+  </style>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+	
+  <a class="navbar-brand" href="#">Navbar</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact Us</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  <div class="carousel-caption">
+			<h5>this is first</h5>
+			<p>loreum ipsum</p>
+			<button class="btn btn-primary">VIEW</button>
+		  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  <div class="carousel-caption">
+			<h5>this is first</h5>
+			<p>loreum ipsum</p>
+			<button class="btn btn-primary">VIEW</button>
+		  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  <div class="carousel-caption">
+			<h5>this is first</h5>
+			<p>loreum ipsum</p>
+			<button class="btn btn-primary">VIEW</button>
+		  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon hvr-grow" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon hvr-grow" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- services -->
+<div class="row" id="services">
+<div class="col-lg-12 col-md-12">
+<div class="my-5">
+  <h1 class="text-center text-uppercase" >Services</h1>
+  <hr class="w-25 mx-auto"></hr>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+ <div class="row ">
+   <div class="col-lg-4 col-md-6 col-12">
+     <div class="card">
+  <img class="card-img-top" src="kl.jpg">
+  <div class="card-body">
+    <h5 class="card-title"  style="text-align:center;">Card title</h5>
+    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button href="#" class="btn btn-primary " style="align-items:center;" >Go somewhere</button>
+  </div>
+</div>
+   </div>
+    <div class="col-lg-4 col-md-6 col-12">
+     <div class="card">
+  <img class="card-img-top" src="kl.jpg">
+  <div class="card-body">
+    <h5 class="card-title"  style="text-align:center;">Card title</h5>
+    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary"  style="text-align:center;">Go somewhere</a>
+  </div>
+</div>
+   </div>
+    <div class="col-lg-4 col-md-6 col-12">
+     <div class="card">
+  <img class="card-img-top img-fluid" src="kl.jpg">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align:center;">Card title</h5>
+    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary"  style="text-align:center;">Go somewhere</a>
+  </div>
+</div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-12 my-5">
+     <div class="card">
+  <img class="card-img-top" src="kl.jpg">
+  <div class="card-body">
+    <h5 class="card-title"  style="text-align:center;">Card title</h5>
+    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary"  style="align-items:center;">Go somewhere</a>
+  </div>
+</div>
+   </div>
+ </div>
+</div>
+<div class="row" id="about">
+<div class="col-lg-12 col-md-12">
+<div class="my-5">
+  <h1 class="text-center text-uppercase" >About us</h1>
+  <hr class="w-25 mx-auto"></hr>
+  </div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="owl-carousel owl-theme ">
+  <div  >
+      <img src="kl.jpg" class="img-fluid w-100 " alt="...">
+	 
+    </div>
+  <div >
+      <img src="kl.jpg" class="img-fluid w-100" alt="...">
+	  
+    </div>
+  <div >
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  
+    </div>
+	<div >
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  
+    </div>
+	<div>
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  
+    </div>
+	<div>
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  
+    </div>
+	<div>
+      <img src="kl.jpg" class="d-block w-100" alt="...">
+	  
+    </div>
+	
+	
+</div>
+</div>
+</div>
+
+<div class="row" id="contact">
+<div class="col-lg-12 col-md-12">
+<div class="my-5">
+  <h1 class="text-center text-uppercase">Contact us</h1>
+  <hr class="w-25 mx-auto"></hr>
+  </div>
+</div>
+</div>
+</div>
+<section class="back">
+<div class="container">
+<div class="row">
+<div class="col-lg-5 col-md-6 col-12">
+<h2 class="text-center">Get In Touch</h2>
+<form class="back">
+  <div class="form-row ">
+     
+    <div class="form-group col-md-6">
+	
+      <label for="name">First Name</label>
+      <input type="name" class="form-control" id="name" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastname">Last Name</label>
+      <input type="lastname" class="form-control" id="lastname" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile" required>
+      <label class="custom-file-label" for="validatedInputGroupCustomFile">Choose file...</label>
+    </div>
+  </div>
+ <div class=" text  mb-3">
+    <label for="validationTextarea">Textarea</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+    <div class="invalid-feedback">
+      Please enter a message in the textarea.
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<div class="col-lg-6 col-md-4 col-12">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_R16e80.json"  background="transparent"  speed="1"  style="width: 600px; height: 300px;" loop  autoplay></lottie-player>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col-lg-4 col-sm-4 offset-l2 sm-12 link">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+			  <div class="col-lg-4 col-sm-4 offset-l2 sm-12 link">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+
+
+<script>
+
+  $(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+	  items:15,
+    loop:true,
+    margin:20,
+	dots:false,
+	autoplay:3000,
+	dotsEach:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:true
+        }
+    }
+})
+});
+</script>
+ 
+
+    </body>
+</html>
