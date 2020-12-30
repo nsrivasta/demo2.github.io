@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <title>Hello, world!</title>
 	<style>
@@ -23,6 +24,8 @@
 		padding:0;
 		font-family: 'Open Sans', sans-serif;
 		/*font-family: 'Oswald', sans-serif;*/
+		box-sizing:border-box;
+		
 		
 	}
 	html {
@@ -116,13 +119,15 @@
 }
 .card{
 	box-shadow: 0 8px 6px -6px black;
-	 transition: transform .2s;
+	 
+	 cursor:pointer;
+	
 }
 .card:hover{
-	transform:rotate(2deg);
-	transition:all 0.2s;
-	transform: scaleY(1.1);
 	
+	transition:all 0.6s ease;
+	transition-timing-function: ease-in-out;
+	transform: scale(1.1);
 }
 .btn{
 	align-items:center;
@@ -227,6 +232,85 @@ img {
     text-transform: capitalize;
 
 }
+.carousel-item{
+	height:90vh;
+	min-height:300px;
+}
+.carousel-caption{
+	bottom:220px;
+}
+.carousel-caption h5{
+	font-size:60px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	margin-top:25px;
+	font-weight:900;
+}
+.carousel-caption p{
+	font-size:18px;
+	margin:auto;
+	width:60%;
+	line-height:1.9;
+}
+@media(max-width:576px){
+	.carousel-caption h5{
+	font-size:30px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	margin-top:15px;
+	font-weight:00;
+	}
+	.carousel-caption p{
+	font-size:18px;
+	margin:auto;
+	width:60%;
+	line-height:1.9;
+}
+.carousel-item{
+	height:40vh;
+	min-height:300px;
+}
+.carousel-caption{
+	bottom:22px;
+}
+}
+
+
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
 
@@ -251,15 +335,25 @@ img {
         <a class="nav-link" href="#about">About Us</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        </a>-->
+        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        </div>-->
+		<div class="dropdown" aria-labelledby="navbarDropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="#contact">Contact Us</a>
@@ -289,29 +383,34 @@ function googleTranslateElementInit() {
     <li data-target="#carouselExampleControls" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
+            <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="kl.jpg" class="d-block w-100" alt="...">
-	  <div class="carousel-caption">
-			<h5 data-aos="fade-down">this is first</h5>
-			<p>loreum ipsum</p>
-			<button class="btn btn-primary">VIEW</button>
-		  </div>
+	     <div class="carousel-caption d-none d-md-block">
+        <h5 data-aos="fade-down" data-aos-easing="linear"
+     data-aos-duration="1500">First slide label</h5>
+        <p data-aos="fade-left" >Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		<button class="btn btn-primary" data-aos="zoom-in" data-aos-easing="linear"
+     data-aos-duration="1500">VIEW</button>
+      </div>
+	  
     </div>
     <div class="carousel-item">
       <img src="kl.jpg" class="d-block w-100" alt="...">
-	  <div class="carousel-caption">
-			<h5>this is first</h5>
-			<p>loreum ipsum</p>
-			<button class="btn btn-primary">VIEW</button>
-		  </div>
+		  <div class="carousel-caption d-none d-md-block" ">
+        <h5 class="animated bounce">First slide label</h5>
+        <p data-aos="fade-down">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		<button class="btn btn-primary" data-aos="fade-down" data-aos-easing="linear"
+     data-aos-duration="1500">VIEW</button>
+      </div>
     </div>
     <div class="carousel-item">
       <img src="kl.jpg" class="d-block w-100" alt="...">
-	  <div class="carousel-caption">
-			<h5>this is first</h5>
-			<p>loreum ipsum</p>
-			<button class="btn btn-primary">VIEW</button>
-		  </div>
+	    <div class="carousel-caption d-none d-md-block">
+        <h5 data-aos="fade-up" >First slide label</h5>
+        <p data-aos="fade-down" >Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		<button class="btn btn-primary">VIEW</button>
+      </div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -337,7 +436,7 @@ function googleTranslateElementInit() {
 
 <div class="container">
  <div class="row ">
-   <div class="col-lg-4 col-md-6 col-12" data-aos="fade-left">
+   <div class="col-lg-4 col-md-6 col-12 mt-5" data-aos="fade-left">
      <div class="card" >
   <img class="card-img-top" src="kl.jpg">
   <div class="card-body text-center">
@@ -347,7 +446,7 @@ function googleTranslateElementInit() {
   </div>
 </div>
    </div>
-    <div class="col-lg-4 col-md-6 col-12 " data-aos="fade-down" data-aos-easing="linear"
+    <div class="col-lg-4 col-md-6 col-12 mt-5" data-aos="fade-down" data-aos-easing="linear"
      data-aos-duration="1500">
      <div class="card" >
   <img class="card-img-top" src="kl.jpg">
@@ -358,7 +457,7 @@ function googleTranslateElementInit() {
   </div>
 </div>
    </div>
-    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-right">
+    <div class="col-lg-4 col-md-6 col-12 mt-5" data-aos="fade-right">
      <div class="card" >
   <img class="card-img-top img-fluid" src="kl.jpg">
   <div class="card-body text-center">
@@ -484,7 +583,7 @@ function googleTranslateElementInit() {
 <div class="row" id="contact">
 <div class="col-lg-12 col-md-12">
 <div class="my-5">
-  <h1 class="text-center text-uppercase">Mission</h1>
+  <h1 class="text-center text-uppercase animated flash">Mission</h1>
   <hr class="w-25 mx-auto"></hr>
   </div>
 </div>
@@ -513,6 +612,8 @@ function googleTranslateElementInit() {
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 </div>
+
+
 <footer class="footer mt-5">
           <div class="container">
             <div class="row">
@@ -589,7 +690,7 @@ function googleTranslateElementInit() {
     }
 })
 });
-AOS.init();
+
 </script>
 <script>
 var acc = document.getElementsByClassName("accordion");
@@ -606,6 +707,9 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+</script>
+<script>
+AOS.init();
 </script>
  
 
